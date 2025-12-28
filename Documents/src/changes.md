@@ -1,6 +1,26 @@
 # Changes to the Library {#changes}
 \tableofcontents
 
+## 01.11.2025
+- Improved AddVarStr handling. Some PGN fields max size is define 
+  in characters and some like AIS must be forced to ASCII
+- Fixed some message hadling functions.
+
+## 30.10.2025
+- UTF8 support for AddVarStr
+- Pi Pico support for NMEA2000_CAN
+
+## 01.11.2024
+- Add PGN127751
+- Fix PGN129038 field 18
+
+## 24.09.2024
+- Fixed UpdateHasPendingInformation() to use or (||) on test.
+- Fix no NAK for broadcast ISO Request
+- Fix do not call ISORqstHandler for specific messages, if request is broadcast
+- Added HandleCommand group function handler for heartbeat (PGN 126993)
+- Fixed 130316 temperature to unsigned by EricvanderVelde
+
 ## 23.05.2024
 - Fixed GetVarStr to handle invalid length, thanks to EricvanderVelde.
 - Fixed PGN 129794 setter to set SID properly.
